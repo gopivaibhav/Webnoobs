@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-
+{% load static %}
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
@@ -24,7 +24,7 @@
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                   </svg>
-                <h2 class="title-font font-medium text-3xl text-gray-900">100k</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{tc}}k</h2>
                 <p class="leading-relaxed text-2xl text-black">Total Cases</p>
               </div>
             </div>
@@ -36,7 +36,7 @@
                     <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
                   </svg>
                   
-                <h2 class="title-font font-medium text-3xl text-gray-900">40K</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{nc}}K</h2>
                 <p class="leading-relaxed text-2xl text-black">New Cases</p>
               </div>
             </div>
@@ -46,7 +46,7 @@
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-green-700 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
-                <h2 class="title-font font-medium text-3xl text-gray-900">20k</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{rc}}k</h2>
                 <p class="leading-relaxed text-2xl text-black">Recovery</p>
               </div>
             </div>
@@ -57,7 +57,7 @@
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                   
-                <h2 class="title-font font-medium text-3xl text-gray-900">10k</h2>
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{de}}k</h2>
                 <p class="leading-relaxed text-2xl text-black">Deaths</p>
               </div>
             </div>
@@ -68,7 +68,7 @@
 
       <section class="text-gray-900 body-font">
         <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="1st.jpeg">
+          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"  src=' {% static "1st.jpeg" %}'>
           <div class="text-center lg:w-2/3 w-full">
             <h1 class="title-font sm:text-7xl text-3xl mb-4 font-medium text-black">Stay Negative </h1>
             <p class="mb-8 leading-relaxed text-3xl">Follow the listed steps to remain safe from corona!!</p>
@@ -189,7 +189,7 @@
         <section class="text-gray-600 body-font">
           <div class="container px-5 py-24 mx-auto flex flex-wrap">
             <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-              <img alt="feature" class="object-cover object-center h-full w-full" src="2nd.jpeg">
+              <img alt="feature" class="object-cover object-center h-full w-full"  src=' {% static "2nd.jpeg" %}'>
             </div>
             <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
               <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -203,7 +203,7 @@
                 <div class="flex-grow text-gray-900 text-xl">
                   <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Shanti Clinic, Viraj Khand, Lucknow</h2>
                   <p class="leading-relaxed text-base"></p>
-                  <a href="https://maps.app.goo.gl/KnGS3RRPuLL4THuB6"><img src="placeholder.png" height="30" width="30"></a>
+                  <a href="https://maps.app.goo.gl/KnGS3RRPuLL4THuB6"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                 </div>
               </div>
               <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -218,7 +218,7 @@
                 <div class="flex-grow text-gray-900 text-xl">
                   <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Medvilla Hospital, Vijyant Khand, Lucknow</h2>
                   <p class="leading-relaxed text-base"></p>
-                  <a href="https://maps.app.goo.gl/He5KArmMEwrbsmt89"><img src="placeholder.png" height="30" width="30"></a>
+                  <a href="https://maps.app.goo.gl/He5KArmMEwrbsmt89"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                   </a>
                   </div>
                   </div>
@@ -233,7 +233,7 @@
                     <div class="flex-grow text-gray-900 text-xl">
                       <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Manjula Hospital Trauma Centre, Lucknow</h2>
                       <p class="leading-relaxed text-base"></p>
-                      <a href="https://maps.app.goo.gl/E8PE5MxtpPthY5Rp7"><img src="placeholder.png" height="30" width="30"></a>
+                      <a href="https://maps.app.goo.gl/E8PE5MxtpPthY5Rp7"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                     </div>
                     </div>
 
@@ -247,7 +247,7 @@
                       <div class="flex-grow text-gray-900 text-xl">
                         <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Mayo Medical Centre, NICU, Lucknow</h2>
                         <p class="leading-relaxed text-base"></p>
-                        <a href="https://maps.app.goo.gl/WFF9vjRhHhNtBbiX9"><img src="placeholder.png" height="30" width="30"></a>
+                        <a href="https://maps.app.goo.gl/WFF9vjRhHhNtBbiX9"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                       </div>
                       </div>
 
@@ -264,7 +264,7 @@
                         <div class="flex-grow text-gray-900 text-xl">
                           <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Chandan Hospital, Faizabad Road, Lucknow</h2>
                           <p class="leading-relaxed text-base"></p>
-                          <a href="https://maps.app.goo.gl/KSpjTy8tTtPiBSZx6"><img src="placeholder.png" height="30" width="30"></a>
+                          <a href="https://maps.app.goo.gl/KSpjTy8tTtPiBSZx6"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                         </div>
 
 
@@ -285,7 +285,7 @@
               <div class="flex-grow text-gray-900 text-xl">
                 <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Lucknow Metrocity Hospital, Lucknow</h2>
                 <p class="leading-relaxed text-base"></p>
-                <a href="https://maps.app.goo.gl/Vo8AG38xKn6RDxx29"><img src="placeholder.png" height="30" width="30"></a>
+                <a href="https://maps.app.goo.gl/Vo8AG38xKn6RDxx29"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
               </div>
 
 
@@ -305,7 +305,7 @@
                         <div class="flex-grow text-gray-900 text-xl">
                           <h2 class="text-gray-900 text-1xl title-font font-medium mb-3">Gayatri Hospital and Trauma Centre, Faizabad Road, Lucknow</h2>
                           <p class="leading-relaxed text-base"></p>
-                          <a href="https://maps.app.goo.gl/9A7ottCo7GdfAgGg7"><img src="placeholder.png" height="30" width="30"></a>
+                          <a href="https://maps.app.goo.gl/9A7ottCo7GdfAgGg7"><img src=' {% static "placeholder.png" %}' height="30" width="30"></a>
                         </div>
 
 

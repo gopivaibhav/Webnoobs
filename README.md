@@ -1,4 +1,6 @@
 # Stay Fit
+A Medical Assistance, friendly Web app
+
 ## Website Link - [http://stayfit.pythonanywhere.com/](http://stayfit.pythonanywhere.com/)
 In the midst of COVID 19 pandemic it's very essential to hold decent information related to the medical healthcare facilities to tackle any ounce of possibility of death due to lack of information and our website is the sole place where any person can get these information in a concise manner.
 

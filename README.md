@@ -7,7 +7,7 @@ Our major weapon against COVID is the immunity of our body itself as there is no
 
 for more information. click [here](https://docs.google.com/presentation/d/1M15Nb2PY9CaYH9ZU8bETDSvifm9h6TwssXilmMRv558/edit?usp=sharing)
 ### Team
-- Priya Singh
+- Priya Sharma
 - Himanshu Kumar
 - Gopi Vaibhav
 - Ashutosh Rajput

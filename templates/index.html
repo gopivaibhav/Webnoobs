@@ -5,7 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Document</title>
+    <style>
+      .contact_us{
+        font-style: italic;
+        padding-left: 28%;
+        font-weight: bolder;
+        font-size: large;
+      }
+      .submitbutton{
+        padding-left: 27%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+      button{
+        
+        text-decoration: springgreen;
+        color: rgb(75, 15, 240);
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:700;
+      }
+      .heading{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: black;
+        color: gold;
+        border-radius: 8%;
+        text-decoration:transparent;
+    }
+    .heading:hover{
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+    }
+    </style>
+    <title>StayFit</title>
 </head>
 <body bgcolor="E0FFFF">
 {% load static %}
@@ -18,14 +50,12 @@
             <span class="ml-3 text-4xl">Stay Fit</span>
           </a>
           <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#home">Home</a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#daily_pulse">Daily Pulse</a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#vaccinations">Vaccination</a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="corona">Corona Exclusive</a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#aboutus">About us</a>
+            <a class="mr-4 text-2xl hover:text-blue-700" href="#home"><h2 class="heading">HOME</h2></a>
+            <a class="mr-4 text-2xl hover:text-blue-700" href="#daily_pulse"><h2 class="heading">Daily Pulse</h2></a>
+            <a class="mr-4 text-2xl hover:text-blue-700" href="#vaccinations"><h2 class="heading">Vaccinations</h2></a>
+            <a class="mr-4 text-2xl hover:text-blue-700" href="corona"><h2 class="heading">Corona Exclusive</h2></a>
+            <a class="mr-4 text-2xl hover:text-blue-700" href="#aboutus"><h2 class="heading">About Us</h2></a>
           </nav>
-         
-          </button>
         </div>
       </header>
 
@@ -1418,12 +1448,12 @@ brown rice.
 
 
      <section class="text-gray-600 body-font relative">
-      <div class="container px-5 py-24 mx-auto">
+      <!-- <div class="container px-5 py-24 mx-auto"> -->
         <div class="flex flex-col text-center w-full mb-12">
           <h1 class="sm:text-5xl text-4xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-2xl">In case of any query please contact us.</p>
         </div>
-        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <!-- <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
               <div class="relative">
@@ -1445,8 +1475,17 @@ brown rice.
             </div>
             <div class="p-2 w-full">
               <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-xl">Submit</button>
+            </div> -->
+            <div class="contact_us">
+              <form action="" method="POST">{% csrf_token %}
+                {{form}}
+                <br>
+                  <!-- <input type="submit" value="Send!" > -->
+                  <button class="submitbutton" type="submit">
+                    <h2 class="heading">Submit</h2>
+                  </button>
+              </form>
             </div>
-            
     </section>
 
 

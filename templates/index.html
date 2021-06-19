@@ -26,35 +26,68 @@
       }
       .heading{
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        background-color: black;
-        color: gold;
-        border-radius: 8%;
+        color: cornsilk;
+        padding: 5px;
+        margin-top: 15px;
         text-decoration:transparent;
     }
     .heading:hover{
-      background-color: gold;
-      color: black;
       cursor: pointer;
+      background-color:cornsilk;
+      color: black;
     }
+    .main-nav{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-a{
+      display: flex;
+      justify-content: space-between;
+      width: 700px;
+      align-items: center;
+    }
+    .nav-a li{
+      align-items: center;
+    }
+    header{
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: black;
+      color: cornsilk;
+    }
+    
+    @media screen and (max-width:1024px) {
+        div.handles{
+            padding-left: 30%;
+        }
+    }
+    .container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center{
+      margin-left: 0px;
+    }
+
     </style>
     <title>StayFit</title>
 </head>
 <body bgcolor="E0FFFF">
 {% load static %}
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="square" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-4xl">Stay Fit</span>
-          </a>
-          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#home"><h2 class="heading">HOME</h2></a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#daily_pulse"><h2 class="heading">Daily Pulse</h2></a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#vaccinations"><h2 class="heading">Vaccinations</h2></a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="corona"><h2 class="heading">Corona Exclusive</h2></a>
-            <a class="mr-4 text-2xl hover:text-blue-700" href="#aboutus"><h2 class="heading">About Us</h2></a>
+    <header>
+        <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center" style="height: 80px;">
+          <nav class="main-nav md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="square" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="ml-3 text-4xl" style="color: cornsilk;">Stay Fit</span>
+            </a>
+            <ul class="nav-a">
+              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#home"><h2 class="heading">HOME</h2></a></li>
+              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#daily_pulse"><h2 class="heading">Daily Pulse</h2></a></li>
+              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#vaccinations"><h2 class="heading">Vaccinations</h2></a></li>
+              <li><a class="mr-4 text-2xl hover:text-blue-700" href="corona"><h2 class="heading">Corona Exclusive</h2></a></li>
+              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#aboutus"><h2 class="heading">About Us</h2></a></li>
+            </ul>
           </nav>
         </div>
       </header>
@@ -1367,7 +1400,7 @@ brown rice.
     <hr>
 
     <section class="text-black text-xl body-font" id="aboutus">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-24 mx-auto handles">
         <div class="flex flex-col text-center w-full mb-20">
           <h1 class="text-6xl font-medium title-font mb-4 text-black tracking-widest">OUR TEAM</h1>
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-2xl">"Coming together is a beginning. Keeping together is progress. Working together is success."</p>

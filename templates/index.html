@@ -12,44 +12,6 @@
         font-weight: bolder;
         font-size: large;
       }
-      .submitbutton{
-        padding-left: 27%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-      }
-      button{
-        
-        text-decoration: springgreen;
-        color: rgb(75, 15, 240);
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight:700;
-      }
-      .heading{
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: cornsilk;
-        padding: 5px;
-        margin-top: 15px;
-        text-decoration:transparent;
-    }
-    .heading:hover{
-      cursor: pointer;
-      background-color:cornsilk;
-      color: black;
-    }
-    .main-nav{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .nav-a{
-      display: flex;
-      justify-content: space-between;
-      width: 700px;
-      align-items: center;
-    }
-    .nav-a li{
-      align-items: center;
-    }
     header{
       position: fixed;
       top: 0px;
@@ -64,34 +26,136 @@
             padding-left: 30%;
         }
     }
-    .container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center{
-      margin-left: 0px;
-    }
-
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: cornsilk;
+      height: 70px;
+  }
+  
+  .brand-title {
+      font-size: 2rem;
+      margin: .5rem;
+      margin-left: 20px;
+  }
+  
+  .navbar-links ul {
+      display: flex;
+  }
+  
+  .navbar-links li {
+      list-style: none;
+  }
+  
+  .navbar-links li a {
+      display: block;
+      text-decoration: none;
+      color: cornsilk;
+      padding: 1rem;
+      font-weight: 600;
+  }
+  
+  .navbar-links li:hover {
+      background-color: cornsilk;
+  }
+  .navbar-links li a:hover{
+      color: black;
+  }
+  .toggle-button {
+      position: absolute;
+      top: .75rem;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+  }
+  
+  .toggle-button .bar {
+      height: 3px;
+      width: 100%;
+      background-color: cornsilk;
+      border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+      .navbar {
+          flex-direction: column;
+          height: 60px;
+      }
+  
+      .toggle-button {
+          display: flex;
+      }
+  
+      .navbar-links {
+          display: none;
+          width: 100%;
+      }
+  
+      .navbar-links ul {
+          width: 100%;
+          flex-direction: column;
+          background-color: black;
+          padding-left: 0;
+      }
+  
+      .navbar-links ul li {
+          text-align: center;
+      }
+  
+      .navbar-links ul li a {
+          padding: .5rem 1rem;
+      }
+  
+      .navbar-links.active {
+          display: flex;
+      }
+  }
     </style>
     <title>StayFit</title>
 </head>
 <body bgcolor="E0FFFF">
-{% load static %}
-    <header>
-        <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center" style="height: 80px;">
-          <nav class="main-nav md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="square" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span class="ml-3 text-4xl" style="color: cornsilk;">Stay Fit</span>
-            </a>
-            <ul class="nav-a">
-              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#home"><h2 class="heading">HOME</h2></a></li>
-              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#daily_pulse"><h2 class="heading">Daily Pulse</h2></a></li>
-              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#vaccinations"><h2 class="heading">Vaccinations</h2></a></li>
-              <li><a class="mr-4 text-2xl hover:text-blue-700" href="corona"><h2 class="heading">Corona Exclusive</h2></a></li>
-              <li><a class="mr-4 text-2xl hover:text-blue-700" href="#aboutus"><h2 class="heading">About Us</h2></a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  {% load static %}
+  <header>
+    <nav class="navbar">
+      <div class="brand-title">Stay Fit</div>
+      <a class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links" style="margin-right: 20px;">
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#daily_pulse">Daily Pulse</a></li>
+          <li><a href="#vaccinations">Vaccinations</a></li>
+          <li><a href="corona">Corona Exclusive</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <script>
+
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+  const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+  toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active')
+  })
+
+</script>
 
       <section class="text-gray-900 body-font" id="home">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
